@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module prints the square with coordinates"""
+
+
 class Square:
 
     """ Square class """
