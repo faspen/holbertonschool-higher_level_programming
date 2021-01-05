@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module introduces getter and setter"""
+
+
 class Square:
 
     """ Square class """
