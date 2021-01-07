@@ -1,0 +1,39 @@
+""" Divide all elements in a matrix
+"""
+
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix_divided([[5, 10, 15], [25, 30, 35]], 5)
+[[1.0, 2.0, 3.0], [5.0, 6.0, 7.0]]
+
+>>> matrix_divided([[3, 6, 9], [12, 15, 18]], 3)
+[[1.0, 2.0, 3.0], [4.0, 5.0. 6.0]]
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 4)
+[[0.25, 0.5, 0.75], [1.0, 1.25, 1.5]]
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], None)
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+>>> matrix_divided([], 4)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(3)
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided()
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
