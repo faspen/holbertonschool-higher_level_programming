@@ -30,3 +30,5 @@ class TestMaxInteger(unittest.TestCase):
             max_integer(5)
         except:
             Exception
+if __name__ == "__main__":
+    unittest.main()
