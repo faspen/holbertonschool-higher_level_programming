@@ -1,0 +1,35 @@
+""" Print sorted list of ints
+
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList([1, 3, 5, 2, 4])
+
+>>> print(my_list)
+[1, 3, 5, 2, 4]
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> my_list = MyList([-1, -3, -5, -2, -4])
+
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+>>> my_list.append(1)
+>>> my_list.append(3)
+>>> my_list.append(2)
+>>> my_list.print_sorted()
+[1, 2, 3]
+
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+TypeError: 'NoneType' object is not iterable
+
+>>> my_list = MyList([4, 5], 8)
+Traceback (most recent call last):
+TypeError: list() takes at most 1 argument (2 given)
