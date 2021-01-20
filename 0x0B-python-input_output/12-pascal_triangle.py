@@ -6,7 +6,8 @@ import math
 def combination(n, r):
     """ Helper function
     """
-    return int((math.factorial(n)) / ((math.factorial(r)) * math.factorial(n - r)))
+    return int((math.factorial(n)) / ((math.factorial(r)) *
+                                      math.factorial(n - r)))
 
 
 def pascal_triangle(n):
