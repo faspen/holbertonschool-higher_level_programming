@@ -8,18 +8,13 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-
-    result = []
-    for count in range(n):
-        tmp = []
-        for element in range(count + 1):
-            tmp.append(combination(count, element))
-        result.append(tmp)
-    return result
-
-
-def combination(n, r):
-    """ Helper function
-    """
-    return int((math.factorial(n)) / ((math.factorial(r)) *
-                                      math.factorial(n - r)))
+    lis = [1]
+    for i in range(n):
+        print(lis)
+        newlist = []
+        newlist.append(lis[0])
+        for j in range(len(lis) - 1):
+            newlist.append(lis[j] + lis[j + 1])
+        newlist.append(lis[-1])
+        lis = newlist
+    return lis
