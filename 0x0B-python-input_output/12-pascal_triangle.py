@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """ Module containing pascal_triangle function """
-import math
 
 
 def pascal_triangle(n):
