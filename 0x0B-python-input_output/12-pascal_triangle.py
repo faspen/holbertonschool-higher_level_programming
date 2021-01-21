@@ -3,13 +3,6 @@
 import math
 
 
-def combination(n, r):
-    """ Helper function
-    """
-    return int((math.factorial(n)) / ((math.factorial(r)) *
-                                      math.factorial(n - r)))
-
-
 def pascal_triangle(n):
     """ Print pascal triangle
     """
@@ -23,3 +16,10 @@ def pascal_triangle(n):
             tmp.append(combination(count, element))
         result.append(tmp)
     return result
+
+
+def combination(n, r):
+    """ Helper function
+    """
+    return int((math.factorial(n)) / ((math.factorial(r)) *
+                                      math.factorial(n - r)))
