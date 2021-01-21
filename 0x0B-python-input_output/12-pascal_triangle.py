@@ -9,12 +9,13 @@ def pascal_triangle(n):
     if n <= 0:
         return []
     lis = [1]
-    for i in range(n):
-        print(lis)
+    lol = [[1]]
+    for i in range(n - 1):
         newlist = []
         newlist.append(lis[0])
         for j in range(len(lis) - 1):
             newlist.append(lis[j] + lis[j + 1])
         newlist.append(lis[-1])
         lis = newlist
-    return lis
+        lol.append(lis)
+    return lol
