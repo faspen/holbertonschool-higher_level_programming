@@ -88,3 +88,20 @@ class Rectangle(Base):
         """ Return printable representation """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """Assign arguments"""
+        for i in range(len(args)):
+            if i == 0:
+                super().__init__(args[0])
+            if i == 1:
+                self.width = args[1]
+            if i == 2:
+                self.height = args[2]
+            if i == 3:
+                self.x = args[3]
+            if i == 4:
+                self.y = args[4]
+
+        for k, v in kwargs.items():
+            setattr(self, k, v)
