@@ -10,7 +10,7 @@ class TestMaxInteger(unittest.TestCase):
     """ Tests in class
     """
 
-    def maxint_tests(self):
+    def test_max_int(self):
         """ different tests """
         self.assertEqual(max_integer([1, 2, 3, 44, 5]), 44)
         self.assertEqual(max_integer([-34, -23, -2, 5]), 5)
