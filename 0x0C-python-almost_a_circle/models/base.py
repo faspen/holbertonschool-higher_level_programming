@@ -36,3 +36,35 @@ class Base():
                 list.append(item.to_dictionary())
         with open(fil, 'w', encoding='utf-8') as f:
             f.write(cls.to_json_string(list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Return from json string """
+        if json_string is None or len(json_string) == 0:
+            return []
+        list = json.loads(json_string)
+        return list
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Return instance with all attributes set
+        """
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(5, 5)
+        if cls.__name__ == 'Square':
+            dummy = cls(5)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ return list of instances
+        """
+        fil = cls.__name__ + '.json'
+        list = []
+        try:
+            with open(fil, encoding='utf-8', mode='r') as f:
+                inst = Base.from_json_string(f.read())
+                return [cls.create(**dictions) for dictions in inst]
+        except IOError:
+            return []
