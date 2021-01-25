@@ -63,6 +63,78 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r3.area(), 30)
         self.assertNotEqual(r3.area(), 90)
 
+    def test_args(self):
+        """ Test args update """
+        r1 = Rectangle(3, 2)
+        args = [20, '9', 7, 0, 2]
+        self.assertRaises(TypeError, r1.update(args))
+
+        args = [(20), 9, 7, 0, 2]
+        self.assertRaises(TypeError, r1.update(args))
+
+        args = [20, 9, [7], 0, 2]
+        self.assertRaises(TypeError, r1.update(args))
+
+        args = [20, -9, 7, 0, 2]
+        self.assertRaises(ValueError, r1.update(args))
+
+        args = [-20, 9, 7, 0, 2]
+        self.assertRaises(ValueError, r1.update(args))
+
+        args = [-20, -9, 7, 0, 2]
+        self.assertRaises(ValueError, r1.update(args))
+
+        args = [20, 9, -7, 0, 2]
+        self.assertRaises(ValueError, r1.update(args))
+
+        r1 = Rectangle(2, 4, 6, 8)
+        r1.update(100, 1, 3, 5, 7)
+        self.assertEqual(r1.id, 100)
+        self.assertEqual(r1.width, 1)
+        self.assertEqual(r1.height, 3)
+        self.assertEqual(r1.x, 5)
+        self.assertEqual(r1.y, 7)
+        r1.update(102)
+        self.assertEqual(r1.id, 102)
+
+    def test_kwargs(self):
+        """ Test kwargs update """
+        r1 = Rectangle(20, 12)
+
+        kwargs = {'id': 400, 'width': 10, 'height': '19', 'x': 0, 'y': 0}
+        self.assertRaises(TypeError, r1.update(kwargs))
+
+        kwargs = {'id': 400, 'width': (10), 'height': 19, 'x': 0, 'y': 0}
+        self.assertRaises(TypeError, r1.update(kwargs))
+
+        kwargs = {'id': 400, 'width': [10], 'height': (19), 'x': 0, 'y': 0}
+        self.assertRaises(TypeError, r1.update(kwargs))
+
+        kwargs = {'id': 400, 'width': 10, 'height': 19, 'x': 3, 'y': (3)}
+        self.assertRaises(TypeError, r1.update(kwargs))
+
+        kwargs = {'id': 400, 'width': 10, 'height': 19, 'x': [3], 'y': 3}
+        self.assertRaises(TypeError, r1.update(kwargs))
+
+        kwargs = {'id': 300, 'width': -10, 'height': 19, 'x': 3, 'y': 3}
+        self.assertRaises(ValueError, r1.update(kwargs))
+
+        kwargs = {'id': 300, 'width': 10, 'height': 19, 'x': 3, 'y': -3}
+        self.assertRaises(ValueError, r1.update(kwargs))
+
+        kwargs = {'id': 345, 'width': 10, 'height': -19, 'x': -3, 'y': 3}
+        self.assertRaises(ValueError, r1.update(kwargs))
+
+        r1 = Rectangle(30, 12, 4, 5)
+        r1.update(id=89, width=15, height=6, x=2, y=3)
+        self.assertEqual(r1.id, 89)
+        self.assertEqual(r1.width, 15)
+        self.assertEqual(r1.height, 6)
+        self.assertEqual(r1.x, 2)
+        self.assertEqual(r1.y, 3)
+        r1.update(id=92)
+        self.assertEqual(r1.id, 92)
+
 
 if __name__ == "__main__":
     unittest.main()
