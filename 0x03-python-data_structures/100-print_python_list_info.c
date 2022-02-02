@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* print_python_list_info - print info
+* print_python_list_info - print the info
 * @p: pointer
 */
 void print_python_list_info(PyObject *p)
