@@ -25,6 +25,11 @@ We got our first taste of SQL databases and queries in this project. This one wa
 
 We learned bare-bones concepts from this project, whether it was learning how to print an sentence or finding the factorial of a given number. Later, we would go on to learn how to use javascript with web dev elements.
 
+## Biggest Challenges
+
+By far, it was installing pip packages. All sorts of issues would be encountered while installing, whether it was pip itself needing an update or the package being depracated.
+Another was the version of python we used. We used python 3.5, a version that's quite old. If we wanted to experiment with different libraries that required a more recent version of the language, we had to code elsewhere.
+
 ## Creator
 
 Finn Aspenson
