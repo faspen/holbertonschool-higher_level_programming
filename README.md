@@ -11,15 +11,24 @@ Down below are some highlight projects from this repository:
 
 ![](assets/pyclass.png)
 
-This project introduced us to the basics of object-oriented programming in python for the first time.
+This project introduced us to the basics of object-oriented programming in python for the first time. We learned about getter and setter methods as well as class initializers.
 
 ## [SQL_introduction](https://github.com/faspen/holbertonschool-higher_level_programming/tree/main/0x0D-SQL_introduction)
 
 ![](assets/sql.png)
 
-We got our first taste of SQL databases and queries in this project. This one was my personal favorite.
+We got our first taste of SQL databases and queries in this project. This one was my personal favorite since it was just fun in general to work with. While table joinings weren't covered in this, we did learn how to cherry pick specific kinds of data from a table, like the average score on a test or listing data in an ordered fashion.
+
+## [javascript-warm_up](https://github.com/faspen/holbertonschool-higher_level_programming/tree/main/0x12-javascript-warm_up)
+
+![](assets/jsimage.png)
+
+We learned bare-bones concepts from this project, whether it was learning how to print an sentence or finding the factorial of a given number. Later, we would go on to learn how to use javascript with web dev elements.
 
 ## Creator
+
+Finn Aspenson
+
 * [Twitter](https://twitter.com/FAspenson)
 * [LinkedIn](https://www.linkedin.com/in/finn-aspenson-0a23841b6/)
 * Here's a notable [project](https://github.com/mlaizure/dragonfly)
