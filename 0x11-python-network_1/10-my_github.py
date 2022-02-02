@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Task 9 module"""
+"""My github task module"""
 
 
 import requests
